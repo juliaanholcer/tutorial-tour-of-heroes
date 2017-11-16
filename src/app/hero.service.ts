@@ -9,7 +9,7 @@ import { MessageService } from './message.service';
 @Injectable()
 export class HeroService {
 
-  constructor(private messageService: MessageService) { }
+  constructor(public messageService: MessageService) { }
 
   getHeroes(): Observable<Hero[]> {
     this.messageService.add('HeroService: fetched heroes, YEEEEAHHHH!!!!');
